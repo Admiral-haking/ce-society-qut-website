@@ -8,12 +8,12 @@ services:
     environment:
       POSTGRES_DB: mydb
       POSTGRES_USER: myuserr
-      POSTGRES_PASSWORD: ahmad10313
+      POSTGRES_PASSWORD: test1234
     ports:
-      - "5432:5432"
+      - "6543:5432"
     volumes:
       - postgresql_data:/var/lib/postgresql/data
-    command: postgres -c listen_addresses='*'
+
 
   redis:
     image: redis:7-alpine

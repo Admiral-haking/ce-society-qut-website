@@ -47,7 +47,7 @@
         "csv-parse": "^5.6.0",
         "csv-writer": "^1.6.0",
         "date-fns": "^4.1.0",
-        "date-fns-jalali": "^4.1.0-0",
+        "date-fns-jalali": "4.0.0-0",
         "dompurify": "^3.2.6",
         "express-rate-limit": "^7.5.0",
         "formidable": "^3.5.4",
@@ -68,7 +68,6 @@
         "nodemailer": "^6.10.1",
         "pg": "^8.16.3",
         "postcss-preset-env": "^9.3.0",
-        "prisma": "^6.12.0",
         "react": "^18.2.0",
         "react-beautiful-dnd": "^13.1.1",
         "react-chartjs-2": "^5.3.0",
@@ -115,8 +114,15 @@
         "eslint": "^8.57.1",
         "eslint-config-next": "^14.1.0",
         "postcss": "^8.4.23",
+        "prisma": "^6.12.0",
         "ts-node": "^10.9.1",
         "tsx": "^4.20.3",
         "typescript": "^5.8.3"
+    },
+    "prisma": {
+        "seed": "tsx prisma/seed.ts"
+    },
+    "overrides": {
+        "date-fns-jalali": "4.0.0-0"
     }
 }
