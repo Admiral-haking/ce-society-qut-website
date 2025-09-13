@@ -1,24 +1,38 @@
-# Operating system / editor files
+# OS files
 .DS_Store
 Thumbs.db
 Desktop.ini
 
 # Logs
+logs/
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
-# Node / frontend
+# Node / Next.js
 node_modules/
+.next/
+out/
 dist/
 build/
+coverage/
+
+# Lockfiles (توصیه: فقط یکی را نگه دار)
+# اگر می‌خواهی «هیچ» لاک‌فایلی در رپو نباشد، این سه خط را نگه دار.
+# اما بهتر است یکی (npm یا yarn یا pnpm) را نگه داری و دو تای دیگر را ignore کنی.
+# در صورت تمایل به نگه داشتن package-lock.json، این سطر را حذف کن.
 package-lock.json
 yarn.lock
 pnpm-lock.yaml
 
-# PHP / Laravel
+# PHP / Laravel (اگر پوشه لاراول داری)
 vendor/
 storage/*
 !storage/app/public
 public/storage
+
+# Env & secrets
 .env
 *.env
 
@@ -26,11 +40,15 @@ public/storage
 __pycache__/
 .venv/
 
-# Database files
+# Databases
 *.sqlite
 *.sql
+*.db
+prisma/*.db
+prisma/**/*.db
+prisma/dist/
 
-# IDE / editor
+# IDE / editors
 .idea/
 .vscode/
 
