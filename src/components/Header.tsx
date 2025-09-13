@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { useSession } from 'next-auth/react';
-import { useTranslation } from 'next-i18next';
 import Image from 'next/image';
 import { AppBar, Toolbar, Box, Button, IconButton, Drawer, List, ListItem, ListItemText, Divider, useMediaQuery, useTheme } from '@mui/material';
-import { FaTelegramPlane, FaInstagram, FaLinkedinIn, FaGithub, FaDiscord } from 'react-icons/fa';
 import MenuIcon from '@mui/icons-material/Menu';
 
 const navLinks = [
@@ -21,7 +19,6 @@ const navLinks = [
 const disabledLinks = ['/courses', '/events', '/competitions', '/dashboard'];
 
 const Header = () => {
-  const { t } = useTranslation('common');
   const { data: session } = useSession();
   const [drawerOpen, setDrawerOpen] = useState(false);
   const theme = useTheme();
@@ -215,4 +212,4 @@ const Header = () => {
   );
 };
 
-export default Header; 
+export default Header;
